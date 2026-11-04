@@ -81,6 +81,8 @@ Step-by-step: [docs/howto.md](docs/howto.md)
 | `scripts/install.sh` | Downloads and runs the official BackPack installer, then prints next steps | Installs BackPack |
 | `scripts/diagnose.sh` | Lists tunnel services, counts recent flaps, checks interface, ping through the tunnel, and listening ports | No (read-only) |
 | `scripts/check-ports.sh HOST PORT...` | Tests that TCP ports on a server accept connections | No |
+| `scripts/monitor.sh IRAN_IP PORT...` | Logs reachability of the Iran-side IP (ping + ports + tunnel) with timestamps and `CHANGE` lines; run it from the server abroad | Only its own log |
+| `scripts/install-monitor.sh IRAN_IP PORT...` | Installs `monitor.sh` as a systemd timer (every 5 min) | Adds a timer |
 
 ---
 
